@@ -1,0 +1,51 @@
+<% layout("/layouts/boilerplate") %>
+
+<body>
+   
+<div class="row mt-3">
+<div class="col-8 offset-2">
+    <h3><b>Create new Listing</b></h3>
+    <form method="POST" action="/listings" enctype="multipart/form-data">
+        <div>
+            <label for="title" class="form-label" type="text">Title : </label>
+            <input name="listing[title]" type="text" id="title" class="form-control" required>
+        </div>
+      
+       
+        <div class="mb-3">
+            <label for="image" class="form-label">Upload Image</label>
+            <input type="file" name="listing[image]"  id="image" class="form-control" >
+            required
+        </div>
+        <div>
+            <label for="description" class="form-label">Description : </label>
+            <textarea name="listing[description]" type="text"id="description" class="form-control" required></textarea>
+        </div>
+       
+       
+       <div class="row">
+       <div class="mb-3 col-md-4">
+            <label for="price" class="form-label">Price: </label>
+            <input type="number" name="listing[price]" id="price" class="form-control" required>
+        </div>
+
+       <div class="mb-3 col-md-8">
+            <label for="country" class="form-label">Country : </label>
+            <input type="text" name="listing[country]" id="country" class="form-control" required>
+       </div>
+       </div>
+        
+        <div>
+            <label for="location" class="form-label">Location : </label>
+            <input name="listing[location]" type="text" id="location" class="form-control" required>
+        </div><br>
+        
+        <button style="background-color: red;" class="btn btn-dark">Add</button>
+    </form>
+</div>
+</div>
+
+
+
+</body>
+</html>
